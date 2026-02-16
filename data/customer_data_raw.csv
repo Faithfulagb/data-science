@@ -1,0 +1,11 @@
+CustomerID,fullName,Gender,Age,Region,Product,Quantity,Price($),PurchaseDate,Feedback,IsMember
+201,Alice Johnson,F,29,North,Laptop,1,$850.50,2023/04/12,Good,Yes
+202,micheal SMITH,Male,thirty,south,Phone,2,300,2023-11-01,Excellent,no
+203,Sarah lee,F,26,east,Laptop,1,$950,2024/01/18,,Y
+204,David-Kim,M,31,west,Tablet,3,NaN,2022/09/25,Average,n
+205,NaN,Female,42,north,Earphones,5,75,2021/07/05,Good,yes
+206,john brown,m,27,marketing,Laptop,1,"1,200",2024/10/14,Poor,No
+NaN,Emma Wilson,F,33,East,Charger,2,25,2022/12/01,Good,Yes
+208,TOM davis,M,30,South,Laptop,1,800,2023/03/22,,True
+209,Jane Miller,Female,NaN,HR,Phone,2,310,2023/05/10,bad,N
+210,Chris taylor,male,28,south,Charger,3,30,2024/02/05,Excellent,TRUE
