@@ -1,0 +1,11 @@
+customer_id,full_name,gender,age,region,product,quantity,price,purchase_date,feedback,is_member,total_sales,age_group,year,target_sales,manager,contact_email
+201.0,Alice Johnson,F,29.0,north,Laptop,1,850.5,2023-12-04,Good,True,850.5,Adult,2023,12000,Grace Anthony,grace.anthony@company.com
+202.0,Micheal Smith,M,30.0,south,Phone,2,300.0,2023-01-11,Excellent,False,600.0,Adult,2023,10000,Paul Walker,paul_walker@company.com
+203.0,Sarah Lee,F,26.0,east,Laptop,1,950.0,2024-01-18,No Feedback,True,950.0,Adult,2024,8500,Diana Lee,diana.lee@company.com
+204.0,David Kim,M,31.0,west,Tablet,3,310.0,2022-09-25,Average,False,930.0,Adult,2022,9000,John Kim,john.kim@company.com
+205.0,Unknown,F,42.0,north,Earphones,5,75.0,2021-05-07,Good,True,375.0,Mature,2021,12000,Grace Anthony,grace.anthony@company.com
+206.0,John Brown,M,27.0,south,Laptop,1,1200.0,2024-10-14,Poor,False,1200.0,Adult,2024,10000,Paul Walker,paul_walker@company.com
+207.0,Emma Wilson,F,33.0,east,Charger,2,25.0,2022-01-12,Good,True,50.0,Adult,2022,8500,Diana Lee,diana.lee@company.com
+208.0,Tom Davis,M,30.0,south,Laptop,1,800.0,2023-03-22,No Feedback,True,800.0,Adult,2023,10000,Paul Walker,paul_walker@company.com
+209.0,Jane Miller,F,30.0,south,Phone,2,310.0,2023-10-05,Bad,False,620.0,Adult,2023,10000,Paul Walker,paul_walker@company.com
+210.0,Chris Taylor,M,28.0,south,Charger,3,30.0,2024-05-02,Excellent,True,90.0,Adult,2024,10000,Paul Walker,paul_walker@company.com
