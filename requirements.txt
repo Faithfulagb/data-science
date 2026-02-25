@@ -65,7 +65,7 @@ nest-asyncio==1.6.0
 notebook==7.5.3
 notebook_shim==0.2.4
 numpy==2.4.2
-packaging<25
+packaging>=20, <25
 pandas==2.3.3
 pandocfilters==1.5.1
 parso==0.8.5
@@ -85,7 +85,7 @@ pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 python-json-logger==4.0.0
 pytz==2025.2
-pywinpty==3.0.2
+# pywinpty==3.0.2
 PyYAML==6.0.3
 pyzmq==27.1.0
 referencing==0.37.0
