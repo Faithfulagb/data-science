@@ -6,7 +6,7 @@ import plotly.express as px
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("your_dataset.csv")
+    df = pd.read_csv("jiji_car_dataset.csv")
     return df
 
 def clean_data(df):
@@ -54,50 +54,54 @@ def show_kpis(df):
 
 
 def show_charts(df):
-
-    fig1 = px.bar(
-        df['make'].value_counts().reset_index(),
-        x='count',
-        y='make',
-        orientation='h',
-        title="Count of Cars by Make"
-    )
-    st.plotly_chart(fig1, use_container_width=True)
-
     
-    avg_make = df.groupby('make')['price'].mean().sort_values().reset_index()
-    fig2 = px.bar(
-        avg_make,
-        x='price',
-        y='make',
-        orientation='h',
-        title="Average Price by Make"
-    )
-    st.plotly_chart(fig2, use_container_width=True)
+    col1, col2 = st.columns(2)
+    with col1:
+        fig1 = px.bar(
+            df['make'].value_counts().reset_index(),
+            x='make',
+            y='count',
+            orientation='v',
+            title="Count of Cars by Make"
+        )
+        st.plotly_chart(fig1, use_container_width=True)
 
+    with col2:
+        avg_make = df.groupby('make')['price'].mean().sort_values().reset_index()
+        fig2 = px.bar(
+            avg_make,
+            x='make',
+            y='price',
+            orientation='v',
+            title="Average Price by Make"
+        )
+        st.plotly_chart(fig2, use_container_width=True)
 
-    fig3 = px.box(df, x='condition', y='price', title="Price by Condition")
-    st.plotly_chart(fig3, use_container_width=True)
+    col1,col2 = st.columns(2)
+    with col1:
+        fig3 = px.box(df, x='condition', y='price', title="Price by Condition")
+        st.plotly_chart(fig3, use_container_width=True)
 
+    with col2:
+        fig4 = px.histogram(df, x='year', nbins=20, title="Car Year Distribution")
+        st.plotly_chart(fig4, use_container_width=True)
 
-    fig4 = px.histogram(df, x='year', nbins=20, title="Car Year Distribution")
-    st.plotly_chart(fig4, use_container_width=True)
+    col1,col2 = st.columns(2)
+    with col1:
+        fig5 = px.scatter(
+            df,
+            x='year',
+            y='price',
+            color='condition',
+            hover_data=['make', 'model'],
+            title="Year vs Price"
+        )
+        st.plotly_chart(fig5, use_container_width=True)
 
-   
-    fig5 = px.scatter(
-        df,
-        x='year',
-        y='price',
-        color='condition',
-        hover_data=['make', 'model'],
-        title="Year vs Price"
-    )
-    st.plotly_chart(fig5, use_container_width=True)
-
-    
-    corr = df[['year', 'price']].corr()
-    fig6 = px.imshow(corr, text_auto=True, title="Correlation Heatmap")
-    st.plotly_chart(fig6, use_container_width=True)
+    with col2:    
+        corr = df[['year', 'price']].corr()
+        fig6 = px.imshow(corr, text_auto=True, title="Correlation Heatmap")
+        st.plotly_chart(fig6, use_container_width=True)
 
 
 st.set_page_config(layout="wide")
